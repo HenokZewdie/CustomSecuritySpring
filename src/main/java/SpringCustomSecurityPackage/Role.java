@@ -1,6 +1,7 @@
 package SpringCustomSecurityPackage;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Set;
 
 @Entity
@@ -13,7 +14,7 @@ public class Role {
     private String role;
 
     @ManyToMany(mappedBy = "roles",fetch = FetchType.LAZY)
-    private Set users;
+    private Collection<User> users;
 
     public long getId() {
         return id;
@@ -31,11 +32,11 @@ public class Role {
         this.role = role;
     }
 
-    public Set getUsers() {
+    public Collection<User> getUsers() {
         return users;
     }
 
-    public void setUsers(Set users) {
+    public void setUsers(Collection<User> users) {
         this.users = users;
     }
 }

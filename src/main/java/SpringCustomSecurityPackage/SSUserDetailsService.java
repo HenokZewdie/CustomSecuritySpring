@@ -7,6 +7,7 @@ package SpringCustomSecurityPackage;
         import javax.transaction.Transactional;
         import java.util.HashSet;
         import java.util.Set;
+        import SpringCustomSecurityPackage.Role;
 
 
 @Transactional

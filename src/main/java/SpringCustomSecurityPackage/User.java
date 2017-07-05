@@ -41,7 +41,7 @@ public class User {
 
     @ManyToMany(fetch = FetchType.EAGER)
     @JoinTable(joinColumns = @JoinColumn(name = "user_id"),inverseJoinColumns = @JoinColumn(name = "role_id"))
-    private Collection roles;
+    private Collection <Role> roles;
 
     public long getId() {
         return id;
@@ -99,11 +99,11 @@ public class User {
         this.username = username;
     }
 
-    public Collection getRoles() {
+    public Collection<Role> getRoles() {
         return roles;
     }
 
-    public void setRoles(Collection roles) {
+    public void setRoles(Collection<Role> roles) {
         this.roles = roles;
     }
 }
